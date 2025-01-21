@@ -2,6 +2,19 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Change text selection color */
+::selection {
+  background-color: #ffcc00; /* Yellow highlight */
+  color: #000; /* Black text */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+
 /* Reset default margin and padding */
 * {
     margin: 0;
