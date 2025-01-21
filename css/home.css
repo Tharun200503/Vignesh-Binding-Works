@@ -934,6 +934,24 @@ video {
   }
 }
 
+@media (max-width: 384px) {
+  .facts .col-sm-6 {
+    max-width: 100%;
+  }
+
+  .facts h1 {
+    font-size: 20px; /* Adjust number size */
+  }
+
+  .facts span {
+    font-size: 12px; /* Adjust subtitle size */
+  }
+
+  .facts i {
+    font-size: 1.5rem; /* Smaller icon size */
+  }
+}
+
 /* Hover Effects */
 .facts .col-sm-6:hover i,
 .facts .col-sm-6:hover h1 {
@@ -1028,6 +1046,19 @@ video {
 .carousel-testimonial .owl-nav button.owl-prev.disabled {
     opacity: 0.5;
 }
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+}
+
+/* @media screen and (max-width: 480px) {
+   .contact-section {
+    background-color: #1E3E62;
+    color: #fff;
+    padding: 40px 0;
+    }
+} */
 
 /* Footer Styles */
 footer {
