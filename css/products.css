@@ -4,6 +4,19 @@ body{
     background-color: #F4F4F4;
     font-family: Poppins;
 }
+
+/* Change text selection color */
+::selection {
+  background-color: #ffcc00; /* Yellow highlight */
+  color: #000; /* Black text */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
 :root{
     --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
     --item1-filter: blur(30px);
