@@ -1,6 +1,18 @@
 /* Google Font CDN Link */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+/* Change text selection color */
+::selection {
+  background-color: #ffcc00; /* Yellow highlight */
+  color: #000; /* Black text */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
 /* CSS Variables for Consistency */
 :root {
   --primary-color: #355775;
