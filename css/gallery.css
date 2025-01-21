@@ -6,6 +6,18 @@ body {
     color: #333;
 }
 
+/* Change text selection color */
+::selection {
+  background-color: #ffcc00; /* Yellow highlight */
+  color: #000; /* Black text */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
 /* Main header styles */
 header {
     font-family: "Poppins", sans-serif;
