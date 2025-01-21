@@ -1,0 +1,343 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #355876;
+    color: #333;
+}
+
+/* Main header styles */
+header {
+    font-family: "Poppins", sans-serif;
+    width: 1140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    position: sticky;   /* Make the header stick to the top when scrolling */
+    top: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    border-radius: 20px; /* Add smooth rounded corners */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Logo Container */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between the logo and company name */
+}
+
+/* Logo Image */
+.logo-img {
+    height: 65px;
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Company Name Image */
+.company-name-img {
+    margin-left: 30px;
+    height: 65px;
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-img, .company-name-img {
+        height: 50px; /* Adjust size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img, .company-name-img {
+        height: 40px; /* Further adjust size for very small screens */
+    }
+}
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Menu */
+nav {
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+header nav a {
+    font-size: medium;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header nav a:hover {
+    color: white;
+    background-color: #0098DA;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Button Styling */
+.contact-btn {
+    color: white;
+    background-color: #0098DA;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+    background-color: #355876;
+}
+
+/* Menu Toggle for Small Screens */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    nav {
+        display: none; /* Initially hide the navigation menu */
+        flex-direction: column;
+        gap: 15px;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        right: 10px;
+        left: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the toggle button on small screens */
+    }
+
+    /* Open Menu */
+    nav.active {
+        display: flex;
+    }
+}
+
+.gallery .gallery-title {
+    margin-top: 50px;
+    background-color: #ddd;
+    /* background-image: linear-gradient(to bottom right, blue, lightblue); */
+    color: #355876;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50px;
+    margin-left: 550px;
+    margin-right: 550px;
+}
+
+/* Titles Stylings */
+h1 {
+    margin-top: 50px;
+    background-color: #ddd;
+    /* background-image: linear-gradient(to bottom right, blue, lightblue); */
+    color: #355876;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50px;
+    margin-left: 550px;
+    margin-right: 550px;
+}
+
+p {
+    /* background-image: linear-gradient(to bottom right, blue, lightblue); */
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-left: 550px;
+    margin-right: 550px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    gap: 100px;
+    justify-content:center;
+    padding: 20px;
+}
+
+.gallery-column {
+    margin-top: 40px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 30%; /* Each column takes up nearly half the width */
+}
+
+.gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Back to Top Button Styling */
+#button {
+    display: inline-block;
+    background-color: #6A9AB0;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 45px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #3A6D8C;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
