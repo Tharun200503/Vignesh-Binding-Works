@@ -308,6 +308,21 @@ p {
     }
 }
 
+@media (max-width: 1024px) {
+    .gallery-column {
+        width: 100%; /* Adjust column width for small screens */
+    }
+
+    .gallery-item {
+        width: 100%; /* Ensure gallery items take full width */
+    }
+
+    .gallery-title, h1, p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 /* Lightbox */
 .lightbox {
     display: none;
